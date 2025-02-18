@@ -27,8 +27,8 @@ public class LeadCreationFlowStepDefenation {
         }
     }
 
-    @When("^user navigates to (.+) Object$")
-    public void user_navigates_to_Object(String objectName) {
+    @When("^When user navigates to Leads Object$")
+    public void user_navigates_to_Leads_Object() {
         try {
 
         } catch (Exception e) {
