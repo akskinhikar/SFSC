@@ -2,14 +2,17 @@ package com.qa.stepdefenation;
 
 import com.qa.factory.DriverFactory;
 import com.qa.pages.HomePage;
+import com.qa.pages.LeadsPage;
 import com.qa.pages.LoginPage;
+import com.qa.pages.MarketingApp;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class LeadCreationFlowStepDefenation {
     private LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
     private HomePage homePage;
-
+    private MarketingApp marketingApp;
+    private LeadsPage leadsPage;
     @When("^User logs in by using username (.+) and password (.+)$")
     public void User_logs_in_by_using_username_and_password(String uname, String pwd) {
 
@@ -21,24 +24,24 @@ public class LeadCreationFlowStepDefenation {
     public void user_navigates_to_marketing_crm_app() {
         try {
             homePage.clickAppLauncher();
-            homePage.clickMarketingCRMClass();
+            marketingApp = homePage.clickMarketingCRMClass();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    @When("^When user navigates to Leads Object$")
+    @When("^user navigates to Leads Object$")
     public void user_navigates_to_Leads_Object() {
         try {
-
+            leadsPage = marketingApp.clickOnLeadsObject();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
     }
 
-    @When("^user clicks on (.+) button$")
-    public void user_clicks_on_button(String buttonName) {
+    @When("^user clicks on New button for Lead Creation$")
+    public void user_clicks_on_New_button_for_Lead_Creation() {
         try {
 
         } catch (Exception e) {

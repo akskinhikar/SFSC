@@ -25,8 +25,9 @@ public class HomePage {
         driver.findElement(btnappLauncher).click();
     }
 
-    public void clickMarketingCRMClass(){
+    public MarketingApp clickMarketingCRMClass(){
         driver.findElement(maketingCRMClassic).click();
+        return (new MarketingApp(driver));
     }
 
 }

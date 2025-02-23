@@ -1,28 +1,8 @@
 package com.qa.stepdefenation;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.testng.Assert;
+public class StepDefinitionImplementation {
 
-import AbsctractComponents.Reusable;
-import LandingPage.LandingPage;
-import MarketingApp.CampaignObject;
-import RecrutingApp.PositionsObject;
-import SalesApp.AccountsObject;
-import SalesApp.CasesObject;
-import SalesApp.LeadObject;
-import SalesApp.OpportunityObject;
-import Utils.BaseTest;
-import io.cucumber.java.AfterStep;
-import io.cucumber.java.Scenario;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-
-public class StepDefinitionImplementation extends BaseTest {
+	/*
 	public LandingPage landingPage;
 	public CampaignObject co;
 	public PositionsObject po;
@@ -342,7 +322,7 @@ public class StepDefinitionImplementation extends BaseTest {
 		//}
 	}
 	
-	
+	*/
 	
 
 }

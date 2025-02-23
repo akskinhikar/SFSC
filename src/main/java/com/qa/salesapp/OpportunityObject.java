@@ -5,55 +5,53 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import AbsctractComponents.Reusable;
 
-public class OpportunityObject extends Reusable {
+public class OpportunityObject{
 
-	WebDriver driver;
-	String message;
-	String AppName;
-	String messageonnewleadcreation;
-	String messageonleadconverstion;
-	String prodName;
-	Select stage;
+	private WebDriver driver;
+	private String message;
+	private String AppName;
+	private String messageonnewleadcreation;
+	private String messageonleadconverstion;
+	private String prodName;
+	private Select stage;
 
 	public OpportunityObject(WebDriver driver) {
-		super(driver);
 		this.driver = driver;
 	}
 
-	String paraEnd = "']";
+	private String paraEnd = "']";
 
-	String oo_productDropdown = "(//div[@data-aura-class='forceDeferredDropDownAction'])[2]";
+	private String oo_productDropdown = "(//div[@data-aura-class='forceDeferredDropDownAction'])[2]";
 	// String oo_productDropdown2 = "//a[@title='Show 2 more actions']";
-	String oo_productDropdown2 = "(//a[@class='slds-button slds-button--icon-x-small slds-button--icon-border-filled'])[2]";
-	String oo_clickonAddProductsLink = "//a[@title='Add Products']";
-	String oo_clickonChoosePriceBook = "//a[@title='Choose Price Book']";
-	String oo_choosepricebook = "//span[text()='Price Book']/parent::span/following-sibling::div/div/div/div/a";
-	String oo_selectpricebookbyname = "//a[@title='";
-	String oo_savePriceBook = "(//span[text()='Save'])[2]";
-	String oo_SearchProduct = "//input[@placeholder='Search Products...']";
-	String oo_ProductNameCheckBox01 = "//*[text()='";
-	String oo_ProductNameCheckBox02 = "']/parent::span/parent::th/preceding-sibling::td[1]/span/div";
-	String oo_addProduct_NextButton = "//span[text()='Next']";
-	String oo_saveButton = "//button[@title='Save']/span";
-	String oo_Quantity_01 = "//a[text()='";
-	String oo_Quantity_02 = "']/parent::span/parent::th/following-sibling::td[1]";
-	String oo_InputQuantity = "//input[@class='slds-grow input uiInputSmartNumber']";
-	String oo_selectmentionedproduct = "//span[@title='";
-	String oo_selectmentionedproduct02 = " in Products']";
+	private String oo_productDropdown2 = "(//a[@class='slds-button slds-button--icon-x-small slds-button--icon-border-filled'])[2]";
+	private String oo_clickonAddProductsLink = "//a[@title='Add Products']";
+	private String oo_clickonChoosePriceBook = "//a[@title='Choose Price Book']";
+	private String oo_choosepricebook = "//span[text()='Price Book']/parent::span/following-sibling::div/div/div/div/a";
+	private String oo_selectpricebookbyname = "//a[@title='";
+	private String oo_savePriceBook = "(//span[text()='Save'])[2]";
+	private String oo_SearchProduct = "//input[@placeholder='Search Products...']";
+	private String oo_ProductNameCheckBox01 = "//*[text()='";
+	private String oo_ProductNameCheckBox02 = "']/parent::span/parent::th/preceding-sibling::td[1]/span/div";
+	private String oo_addProduct_NextButton = "//span[text()='Next']";
+	private String oo_saveButton = "//button[@title='Save']/span";
+	private String oo_Quantity_01 = "//a[text()='";
+	private String oo_Quantity_02 = "']/parent::span/parent::th/following-sibling::td[1]";
+	private String oo_InputQuantity = "//input[@class='slds-grow input uiInputSmartNumber']";
+	private String oo_selectmentionedproduct = "//span[@title='";
+	private String oo_selectmentionedproduct02 = " in Products']";
 	//String oo_closedStage_Button = "//a[@title='Closed']/parent::li";
 	//String oo_closedStage_Button = "//a[@title='Closed']/span[2]";
-	String oo_closedStage_Button = "//*[text()='Closed']";
-	String oo_SelectClosedStage = "//span[text()='Select Closed Stage']/parent::button";
-	String oo_selectListOfClosedStage = "//select[@class='stepAction required-field select']";
-	String oo_saveClosedStage = "(//span[@class=' label bBody' and text()='Save'])[2]";
-	String oo_EditSelectedProducts = "//*[text()='Edit Selected Products']";
+	private String oo_closedStage_Button = "//*[text()='Closed']";
+	private String oo_SelectClosedStage = "//span[text()='Select Closed Stage']/parent::button";
+	private String oo_selectListOfClosedStage = "//select[@class='stepAction required-field select']";
+	private String oo_saveClosedStage = "(//span[@class=' label bBody' and text()='Save'])[2]";
+	private String oo_EditSelectedProducts = "//*[text()='Edit Selected Products']";
 
 
 	public void addProductOnOpportunityObject(String pricebookname) {
 		try {
-			waitForElementToApprearUsingXpath(oo_productDropdown);
+			//waitForElementToApprearUsingXpath(oo_productDropdown);
 			driver.findElement(By.xpath(oo_productDropdown)).click();
 			Thread.sleep(3000);
 			driver.findElement(By.xpath(oo_clickonChoosePriceBook)).click();
@@ -96,7 +94,7 @@ public class OpportunityObject extends Reusable {
 
 	public void moveToNextSteps(String quantity) {
 		try {
-			waitForElementToApprearUsingXpath(oo_addProduct_NextButton);
+			//waitForElementToApprearUsingXpath(oo_addProduct_NextButton);
 			driver.findElement(By.xpath(oo_addProduct_NextButton)).click();
 			Thread.sleep(3000);
 			driver.findElement(By.xpath(oo_Quantity_01 + prodName + oo_Quantity_02)).click();

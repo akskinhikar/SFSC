@@ -3,40 +3,38 @@ package com.qa.salesapp;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import AbsctractComponents.Reusable;
 
-public class CasesObject extends Reusable{
+public class CasesObject {
+	private  WebDriver driver;
+
+
 	
+
+	private String messageoncasecreation;
+	private String AppName;
+	private String webApp = "//div[@class='slds-icon-waffle']";
+	private String desiredApp = "//p[text()='";
+	private String paraEnd = "']";
+	private String desiredObject01 = "//a[@title='";
+	private String desiredObject02 = "']/parent::*";
+	private String contactName = "//input[contains(@placeholder,'Search Contacts')]";
+	private String accountName = "//input[contains(@placeholder,'Search Accounts')]";
+	private String desiredButton01 = "//div[@title='";
+	private String desiredButton02 = "']/parent::a/parent::li";
+	private String saveButton_newCase = "//button[@name='SaveEdit']";
+	private String caseSubject = "//input[@name='Subject']";
+	private String caseDescription = "//*[@field-label='Description']//textarea";
+	private String selectContactName01 = "//*[text()='Contact Name']/..//span[text()='";
+	private String selectAccountName01 = "//*[text()='Account Name']/..//span[text()='";
+	private String caseOrigin = "//button[contains(@aria-label,'Case Origin')]";
+	private String caseOriginOption = "//*[text()='";
+	private String msg = "//span[@class='toastMessage slds-text-heading--small forceActionsText']";
+
 	public CasesObject(WebDriver driver) {
-		super(driver);
 		this.driver = driver;
-		//PageFactory.initElements(driver, this);
 	}
-	
-	WebDriver driver;
-	String messageoncasecreation;
-	String AppName;
-	
-	
-	String webApp = "//div[@class='slds-icon-waffle']";
-	String desiredApp = "//p[text()='";
-	String paraEnd = "']";
-	String desiredObject01 = "//a[@title='";
-	String desiredObject02 = "']/parent::*";
-	String contactName = "//input[contains(@placeholder,'Search Contacts')]";
-	String accountName = "//input[contains(@placeholder,'Search Accounts')]";
-	String desiredButton01 = "//div[@title='";
-	String desiredButton02 = "']/parent::a/parent::li";
-	String saveButton_newCase = "//button[@name='SaveEdit']";
-	String caseSubject = "//input[@name='Subject']";
-	String caseDescription = "//*[@field-label='Description']//textarea";
-	String selectContactName01 = "//*[text()='Contact Name']/..//span[text()='";
-	String selectAccountName01 = "//*[text()='Account Name']/..//span[text()='";
-	String caseOrigin = "//button[contains(@aria-label,'Case Origin')]";
-	String caseOriginOption = "//*[text()='";
-	String msg = "//span[@class='toastMessage slds-text-heading--small forceActionsText']";
-	
-	
+
+
 	/*
 	public void navigateToDesiredApp(String appName) {
 		driver.findElement(By.xpath(webApp)).click();
@@ -79,6 +77,7 @@ public class CasesObject extends Reusable{
 		messageoncasecreation =  driver.findElement(By.xpath(msg)).getText();
 		System.out.println(messageoncasecreation);
 		return messageoncasecreation;
+
 		
 	}
 
