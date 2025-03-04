@@ -7,16 +7,21 @@ import com.qa.pages.LoginPage;
 import com.qa.pages.MarketingApp;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class LeadCreationFlowStepDefenation {
     private LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
     private HomePage homePage;
     private MarketingApp marketingApp;
     private LeadsPage leadsPage;
+    static Logger logs = LogManager.getLogger("LeadCreationFlowStepDefenation.java");
+    
     @When("^User logs in by using username (.+) and password (.+)$")
     public void User_logs_in_by_using_username_and_password(String uname, String pwd) {
 
         homePage = loginPage.doLogin(uname,pwd);
+        logs.info("Login Was Successful and landed on Home Page");
     }
 
 
@@ -25,6 +30,7 @@ public class LeadCreationFlowStepDefenation {
         try {
             homePage.clickAppLauncher();
             marketingApp = homePage.clickMarketingCRMClass();
+            logs.info("Navigated to Marketing App Successfully");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -34,6 +40,7 @@ public class LeadCreationFlowStepDefenation {
     public void user_navigates_to_Leads_Object() {
         try {
             leadsPage = marketingApp.clickOnLeadsObject();
+            logs.info("Navigated to Leads Page Successfully");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -43,7 +50,8 @@ public class LeadCreationFlowStepDefenation {
     @When("^user clicks on New button for Lead Creation$")
     public void user_clicks_on_New_button_for_Lead_Creation() {
         try {
-
+            leadsPage.click_on_new_leads_creation_button();
+            logs.info("Clicked on New Button for Lead Creation");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -54,7 +62,8 @@ public class LeadCreationFlowStepDefenation {
     public void user_provide_information_regarding_first_name_last_name_company_lead_source_mobile
             (String firstName, String lastName, String company, String leadSource, String mobileNo) {
         try {
-
+            leadsPage.new_neads_ceation_infomation(firstName, lastName, company);
+            logs.info("New Lead Created Successfully");
         }catch (Exception e) {
             e.printStackTrace();
         }

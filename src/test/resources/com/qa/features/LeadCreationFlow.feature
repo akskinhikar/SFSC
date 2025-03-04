@@ -9,8 +9,8 @@ Feature: Creating Lead Creation and Update Flow
     When User logs in by using username <username> and password <password>
     When user navigates to marketing crm app
     When user navigates to Leads Object
-    #When user clicks on New button for Lead Creation
-    #When user provide information regarding first name <FirstName> last name <LastName> company <Company> lead source <LeadSource> mobile <Mobile>
+    When user clicks on New button for Lead Creation
+    When user provide information regarding first name <FirstName> last name <LastName> company <Company> lead source <LeadSource> mobile <Mobile>
     #Then user verify the tost message <message> during new lead creation
 
     #    And user provids Campaign Name <CampaignName> and Expected Revenue <ExpRevenue> and submits order
