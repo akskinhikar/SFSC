@@ -1,6 +1,8 @@
 package com.qa.factory;
 
 import java.time.Duration;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,14 +18,14 @@ public class DriverFactory {
 
 	public WebDriver driver;
 	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
-
+	public static Logger log = LogManager.getLogger(DriverFactory.class);
 	/**
 	 * This method is used to initialize the threadlocal driver on the basis of given browser value
 	 * @param browser
 	 * @return
 	 */
 	public WebDriver init_driver(String browser) {
-		System.out.println("Selected browser is " + browser);
+		log.info("Selected browser is " + browser);
 
 		if (browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
@@ -40,7 +42,7 @@ public class DriverFactory {
 			WebDriverManager.safaridriver().setup();
 			tlDriver.set(new SafariDriver());
 		} else {
-			System.out.println("Please provide correct browser value");
+			log.info("Please provide correct browser value");
 		}
 
 		getDriver().manage().window().maximize();

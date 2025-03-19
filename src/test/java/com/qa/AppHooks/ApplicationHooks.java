@@ -54,7 +54,7 @@ public class ApplicationHooks {
 	
 	@After(order = 0)
 	public void quitBrowser() {
-		driver.close();
+		//driver.close();
 	}
 
 	/**

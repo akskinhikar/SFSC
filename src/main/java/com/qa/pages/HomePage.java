@@ -1,6 +1,5 @@
 package com.qa.pages;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -25,8 +24,9 @@ public class HomePage {
         driver.findElement(btnappLauncher).click();
     }
 
-    public void clickMarketingCRMClass(){
+    public MarketingApp clickMarketingCRMClass(){
         driver.findElement(maketingCRMClassic).click();
+        return (new MarketingApp(driver));
     }
 
 }
