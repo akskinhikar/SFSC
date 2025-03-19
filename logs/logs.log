@@ -8,3 +8,16 @@
 [INFO ] 2025-03-19 13:38:47.028 [main] DriverFactory - Selected browser is chrome
 [INFO ] 2025-03-19 13:40:09.442 [main] LoginPageStepDefenation - Driver Initiated successfully with provided URL
 [INFO ] 2025-03-19 13:40:16.882 [main] java - Login Was Successful and landed on Home Page
+[INFO ] 2025-03-19 15:32:04.438 [main] DriverFactory - Selected browser is chrome
+[INFO ] 2025-03-19 15:32:18.608 [main] LoginPageStepDefenation - Driver Initiated successfully with provided URL
+[INFO ] 2025-03-19 15:32:24.511 [main] java - Login Was Successful and landed on Home Page
+[INFO ] 2025-03-19 15:34:36.571 [main] DriverFactory - Selected browser is chrome
+[INFO ] 2025-03-19 15:34:42.423 [main] LoginPageStepDefenation - Driver Initiated successfully with provided URL
+[INFO ] 2025-03-19 15:34:42.783 [main] java - Login Was Successful and landed on Home Page
+[INFO ] 2025-03-19 15:38:35.460 [main] DriverFactory - Selected browser is chrome
+[INFO ] 2025-03-19 15:38:41.115 [main] LoginPageStepDefenation - Driver Initiated successfully with provided URL
+[INFO ] 2025-03-19 15:38:43.112 [main] java - Login Was Successful and landed on Home Page
+[INFO ] 2025-03-19 15:38:46.319 [main] java - Navigated to Marketing App Successfully
+[INFO ] 2025-03-19 15:38:47.547 [main] java - Navigated to Leads Page Successfully
+[INFO ] 2025-03-19 15:38:49.230 [main] java - Clicked on New Button for Lead Creation
+[INFO ] 2025-03-19 15:38:50.955 [main] java - New Lead Created Successfully

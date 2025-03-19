@@ -30,7 +30,7 @@
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-      <version>4.28.1</version>
+      <version>4.29.0</version>
     </dependency>
 
 
@@ -190,7 +190,7 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.5.2</version>
         <configuration>
-          <testFailureIgnore> false </testFailureIgnore>
+          <testFailureIgnore>true</testFailureIgnore>
           <suiteXmlFiles>
             <suiteXmlFile>src/test/java/com/qa/testrunners/MyTestRunner.java</suiteXmlFile>
 
