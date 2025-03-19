@@ -5,3 +5,6 @@
 [INFO ] 2025-03-05 17:39:48.752 [main] java - Navigated to Leads Page Successfully
 [INFO ] 2025-03-05 17:39:49.732 [main] java - Clicked on New Button for Lead Creation
 [INFO ] 2025-03-05 17:39:50.827 [main] java - New Lead Created Successfully
+[INFO ] 2025-03-19 13:38:47.028 [main] DriverFactory - Selected browser is chrome
+[INFO ] 2025-03-19 13:40:09.442 [main] LoginPageStepDefenation - Driver Initiated successfully with provided URL
+[INFO ] 2025-03-19 13:40:16.882 [main] java - Login Was Successful and landed on Home Page
