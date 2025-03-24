@@ -14,7 +14,7 @@ public class SendEmail {
         System.out.println("============Waiting for Extenet report to generate ==============");
         System.out.println("============Preparing for sending email ==============");
         final String user = "akshaykinhikar21@gmail.com";// change accordingly
-        final String password = "enwopgqitwiwykgh";// change accordingly
+        final String password = "";// change accordingly
         String fromEmail = "akshaykinhikar21@gmail.com";
         String toEmail = "akskinhikar@gmail.com";
 
@@ -76,12 +76,10 @@ public class SendEmail {
 
     }
 
-    public static void main(String[] args) {
-        try {
-            SendEmail.email_with_attachment();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+    public static void main(String[] args) throws InterruptedException {
+
+            //SendEmail.email_with_attachment();
+
     }
 
 
