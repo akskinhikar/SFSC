@@ -2,6 +2,9 @@ package com.qa.AppHooks;
 
 import java.util.Properties;
 
+import com.qa.util.SendEmail;
+import io.cucumber.java.AfterAll;
+import org.apache.commons.mail.EmailException;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -70,5 +73,6 @@ public class ApplicationHooks {
 			scenario.attach(sourcePath, "image/png", screenshotName);
 		}
 	}
+
 
 }
