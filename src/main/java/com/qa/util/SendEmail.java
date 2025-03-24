@@ -3,35 +3,12 @@ package com.qa.util;
 
 import jakarta.mail.*;
 import jakarta.mail.internet.*;
-import org.apache.commons.mail.DefaultAuthenticator;
-import org.apache.commons.mail.Email;
-import org.apache.commons.mail.EmailAttachment;
-import org.apache.commons.mail.EmailException;
-import org.apache.commons.mail.MultiPartEmail;
-import org.apache.commons.mail.SimpleEmail;
-
 import java.io.IOException;
 import java.util.Properties;
 
 
 
 public class SendEmail {
-/*    public static void send_email() throws EmailException {
-        System.out.println("============Preparing for sending email ==============");
-        Email email = new SimpleEmail();
-        email.setHostName("smtp.gmail.com");
-        email.setSmtpPort(465);
-        email.setAuthenticator(new DefaultAuthenticator("akshaykinhikar21@gmail.com", "enwopgqitwiwykgh"));
-        email.setSSLOnConnect(true);
-        email.setFrom("akshaykinhikar21@gmail.com");
-        email.setSubject("sfsc_Automation Status Report");
-        email.setMsg("Please find attached the latest Automation Status Report");
-        email.addTo("akskinhikar@gmail.com");
-        email.send();
-        System.out.println("============Email Sent==============");
-
-
-    }*/
 
     public static void email_with_attachment() throws InterruptedException {
         System.out.println("============Waiting for Extenet report to generate ==============");
